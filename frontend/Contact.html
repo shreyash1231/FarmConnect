@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Farmers Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: green;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links li a:hover {
+            color: #26a69a;
+        }
+
+        /* Content */
+        .contact-container {
+            max-width: 900px;
+            margin: 7rem auto; /* Adjusted to prevent overlap with navbar */
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 2rem 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-container h1 {
+            color: green;
+            margin-bottom: 1rem;
+        }
+
+        .contact-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .contact-container input:focus,
+        .contact-container textarea:focus {
+            border-color: #26a69a;
+            outline: none;
+        }
+
+        .contact-container button {
+            padding: 1rem;
+            background-color: #26a69a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .contact-container button:hover {
+            background-color: #009688;
+            transform: scale(1.05);
+        }
+
+        .contact-container .contact-details {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .contact-container .contact-details p {
+            margin: 0.5rem 0;
+        }
+
+        .contact-container .contact-details span {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">Farmers Market</div>
+        <ul class="navbar-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">......</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! If you have any questions or feedback, feel free to reach out to us through the contact form below or use any of the following methods.</p>
+
+        <!-- Contact Form -->
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <p><span>Email:</span> support@farmersmarket.com</p>
+            <p><span>Phone:</span> +1 (800) 123-4567</p>
+            <p><span>Address:</span> 123 Green Lane, Agriculture City, USA</p>
+        </div>
+    </div>
+
+    <script>
+        // Basic form validation and submission
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Your message has been sent!");
+            // You can also add AJAX here to send the form data to the server
+        });
+    </script>
+
+</body>
+</html>

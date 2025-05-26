@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Farmers Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: green;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links li a:hover {
+            color: #26a69a;
+        }
+
+        /* Content */
+        .about-container {
+            max-width: 900px;
+            margin: 7rem auto; /* Adjusted to prevent overlap with navbar */
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 2rem 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .about-container h1 {
+            color: green;
+            margin-bottom: 1rem;
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+
+        .about-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about-container ul li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .about-container ul li span {
+            font-weight: bold;
+        }
+
+        .about-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">Farmers Market</div>
+        <ul class="navbar-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">.....</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <h1>About Farmers Market</h1>
+        <p>Farmers Market is a platform designed to connect farmers directly with customers, enabling them to buy and sell fresh, locally grown produce. Our goal is to support sustainable agriculture, promote healthy eating, and help local communities thrive by cutting down on intermediaries.</p>
+
+        <h2>Our Vision</h2>
+        <p>We envision a world where everyone has access to fresh, affordable, and healthy food while supporting local farmers and agriculture. Farmers Market aims to revolutionize the way we approach food sourcing, focusing on transparency and direct relationships between farmers and customers.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li><span>Fresh Produce:</span> Buy directly from local farmers to get the freshest produce available.</li>
+            <li><span>Verified Farmers:</span> Only trusted, verified farmers are allowed to sell on our platform.</li>
+            <li><span>Secure Transactions:</span> Our platform ensures safe and secure transactions for both farmers and customers.</li>
+            <li><span>Community Support:</span> By buying locally, you are directly supporting the farmers in your community.</li>
+        </ul>
+
+        <img src="farm-bg.jpg" alt="Farmers Market">
+
+    </div>
+
+</body>
+</html>
