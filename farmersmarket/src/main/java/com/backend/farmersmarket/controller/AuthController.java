@@ -27,7 +27,8 @@ import jakarta.servlet.http.HttpServletRequest;
     "http://localhost:8000",
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3000",
+    "http://localhost:5501"
 })
 @RestController
 @RequestMapping("/api")
@@ -103,9 +104,9 @@ public class AuthController {
             String userType = user.get().getUserType();
             Long farmerId = user.get().getId();
 
-            // Store credentials with IP as key (for demo/testing)
-            String clientIP = httpRequest.getRemoteAddr();
-            loginCache.put(clientIP, new LoginData(username, password));
+            // // Store credentials with IP as key (for demo/testing)
+            // String clientIP = httpRequest.getRemoteAddr();
+            // loginCache.put(clientIP, new LoginData(username, password));
 
             return ResponseEntity.ok(Map.of(
                 "token", token,
@@ -118,20 +119,20 @@ public class AuthController {
         }
     }
 
-    @GetMapping("/chatlogin")
-    public ResponseEntity<?> getLastLoginCredentials(HttpServletRequest httpRequest) {
-        String clientIP = httpRequest.getRemoteAddr();
-        LoginData loginData = loginCache.get(clientIP);
+    // @GetMapping("/chatlogin")
+    // public ResponseEntity<?> getLastLoginCredentials(HttpServletRequest httpRequest) {
+    //     String clientIP = httpRequest.getRemoteAddr();
+    //     LoginData loginData = loginCache.get(clientIP);
 
-        if (loginData != null) {
-            return ResponseEntity.ok(Map.of(
-                "username", loginData.username,
-                "password", loginData.password
-            ));
-        } else {
-            return ResponseEntity.ok(Map.of("username", null, "password", null));
-        }
-    }
+    //     if (loginData != null) {
+    //         return ResponseEntity.ok(Map.of(
+    //             "username", loginData.username,
+    //             "password", loginData.password
+    //         ));
+    //     } else {
+    //         return ResponseEntity.ok(Map.of("username", null, "password", null));
+    //     }
+    // }
     
 
 }
