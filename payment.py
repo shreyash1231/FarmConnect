@@ -7,8 +7,8 @@ CORS(app)  # Allow cross-origin requests from React frontend
 
 # Razorpay API credentials
 razorpay_client = razorpay.Client(auth=(
-    "rzp_test_khN5EUjv2annWz",   # ✅ Your Razorpay Key ID
-    "e2XxVMCzpRvZTOAUkKwBgO4L"    # ✅ Your Razorpay Secret
+    # ✅ Your Razorpay Key ID,
+    # ✅ Your Razorpay Secret
 ))
 
 @app.route('/create-order', methods=['POST'])
