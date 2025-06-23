@@ -1,5 +1,3 @@
-# FarmConnect
-
 # 🌾 FarmConnect
 
 **FarmConnect** is a full-stack agricultural marketplace platform that connects farmers directly with consumers. Farmers can list their crops with ML-predicted MSP suggestions, consumers can browse and buy fresh produce via Razorpay UPI, and both parties can chat in real time. The system combines Spring Boot, Node.js, Flask, React, MongoDB, and MySQL into a unified platform.
