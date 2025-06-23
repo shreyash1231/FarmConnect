@@ -1,5 +1,6 @@
 package com.backend.farmersmarket.controller;
 
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.backend.farmersmarket.entity.LoginData;
 import com.backend.farmersmarket.entity.userdata;
@@ -25,6 +27,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @CrossOrigin(origins = {
     "http://127.0.0.1:5501",
     "http://localhost:8000",
+    "http://127.0.0.1:5500",
     "http://127.0.0.1:8000",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
@@ -118,8 +121,21 @@ public class AuthController {
                     .body(Map.of("error", "Invalid credentials."));
         }
     }
-
-    // @GetMapping("/chatlogin")
+   @GetMapping("/consumerdata/{consumerid}")
+    public ResponseEntity<?> consumerdata(@PathVariable("consumerid") Long id) {
+        try {
+            userdata data = userService.consumerdata(id);
+            if (data == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Consumer data not found.");
+            }
+            return ResponseEntity.ok(data);
+        } catch (NullPointerException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Null value encountered.");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred: ");
+        }
+    }
+        // @GetMapping("/chatlogin")
     // public ResponseEntity<?> getLastLoginCredentials(HttpServletRequest httpRequest) {
     //     String clientIP = httpRequest.getRemoteAddr();
     //     LoginData loginData = loginCache.get(clientIP);

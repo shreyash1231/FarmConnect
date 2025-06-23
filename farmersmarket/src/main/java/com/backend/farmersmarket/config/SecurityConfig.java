@@ -22,7 +22,7 @@ public class SecurityConfig {
         http
             .cors(cors -> cors.configurationSource(request -> {
                 var corsConfig = new CorsConfiguration();
-                corsConfig.setAllowedOrigins(List.of("http://localhost:5501","http://localhost:8000","http://127.0.0.1:8000","http://localhost:3000","http://127.0.0.1:3000","http://127.0.0.1:5501")); // Allow frontend requests
+                corsConfig.setAllowedOrigins(List.of("http://localhost:5501","http://localhost:8000","http://127.0.0.1:8000","http://localhost:3000","http://127.0.0.1:3000","http://127.0.0.1:5501","http://127.0.0.1:5500")); // Allow frontend requests
                 corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allow HTTP methods
                 corsConfig.setAllowedHeaders(List.of("*")); // Allow all headers
                 corsConfig.setAllowCredentials(true); // Allow credentials (cookies, authorization headers)
