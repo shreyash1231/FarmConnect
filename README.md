@@ -65,18 +65,14 @@ BASE_PATH = "C:\Users\SHREYASH\Documents\FarmConnect\dataset\"
 git clone https://github.com/shreyash1231/FarmConnect.git
 cd FarmConnect
 
-### 2. Run the Frontend
+### 2.Start Frontend and Backend Together (MERN)
 cd chat_app_mern
 npm install
-npm run build
-npm start
+npm run build    # Optional: for React production build
+npm start        # Runs both frontend and backend concurrently
 
-### 3. Start the Chat Backend (Node.js)
-cd backend
-npm install
-npm start
 
-### 4. Run the Web Backend (Spring Boot)
+### 3. Run the Web Backend (Spring Boot)
 cd farmersmarket
 ./mvnw spring-boot:run
 
@@ -84,10 +80,10 @@ cd farmersmarket
 spring.datasource.username=root
 spring.datasource.password=Shreyash1@#
 
-### 5. Start the ML Prediction API
+### 4. Start the ML Prediction API
 python model.py
 
-### 6. Start the Payment API (Razorpay)
+### 5. Start the Payment API (Razorpay)
 python payment.py
 
 ---
@@ -95,7 +91,6 @@ python payment.py
 ## 🔐 Environment Variables
 
 ### For `payment.py`
-Create a `.env` file and add:
 RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
 
