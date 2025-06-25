@@ -39,73 +39,93 @@
 ## 📁 Folder Structure
 
 FarmConnect/
-├── chat_app_mern/           # MERN stack app
-│   ├── backend/             # Node.js + MongoDB server
-│   └── frontend/            # React UI
-├── farmersmarket/           # Spring Boot backend
-├── model.py                 # Flask ML prediction API
-├── payment.py               # Flask Razorpay integration
-├── requirements.txt         # Python dependencies
-├── README.md
+├── chat_app_mern/           # MERN stack app  
+│   ├── backend/             # Node.js + MongoDB server  
+│   └── frontend/            # React UI  
+├── farmersmarket/           # Spring Boot backend  
+├── model.py                 # Flask ML prediction API  
+├── payment.py               # Flask Razorpay integration  
+├── requirements.txt         # Python dependencies  
+├── README.md  
 
 ---
 
 ## 📊 Dataset Info
 
-- **Source:** [Agmarknet – Price and Arrivals](https://www.agmarknet.gov.in/PriceAndArrivals/DatewiseCommodityReport.aspx)
-- **Google Drive Dataset:** [Download Here](https://drive.google.com/drive/folders/11TZXBJN0CBeChQw6vAIKrxS8IcxW6S1n)
-- **Configured in:** `model.py`
+- **Source:** [Agmarknet – Price and Arrivals](https://www.agmarknet.gov.in/PriceAndArrivals/DatewiseCommodityReport.aspx)  
+- **Google Drive Dataset:** [Download Here](https://drive.google.com/drive/folders/11TZXBJN0CBeChQw6vAIKrxS8IcxW6S1n)  
+- **Configured in:** `model.py`  
+```python
 BASE_PATH = "C:\Users\SHREYASH\Documents\FarmConnect\dataset\"
+```
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
+```bash
 git clone https://github.com/shreyash1231/FarmConnect.git
 cd FarmConnect
+```
 
-### 2.Start Frontend and Backend Together (MERN)
+### 2. Start Frontend and Backend Together (MERN)
+```bash
 cd chat_app_mern
 npm install
 npm run build    # Optional: for React production build
 npm start        # Runs both frontend and backend concurrently
-
+```
 
 ### 3. Run the Web Backend (Spring Boot)
+```bash
 cd farmersmarket
 ./mvnw spring-boot:run
+```
 
 🔐 **Update MySQL credentials** in `farmersmarket/src/main/resources/application.properties`:
+```properties
 spring.datasource.username=root
 spring.datasource.password=Shreyash1@#
+```
 
 ### 4. Start the ML Prediction API
+```bash
 python model.py
+```
 
 ### 5. Start the Payment API (Razorpay)
+```bash
 python payment.py
+```
 
 ---
 
 ## 🔐 Environment Variables
 
 ### For `payment.py`
+```env
 RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
+```
 
 ### For Chat App (`chat_app_mern/backend/.env`)
+```env
 PORT=8000
 MONGO_URI=mongodb://localhost:27017/chatapp
+```
 
 ---
 
 ## 📦 Python Requirements
 
 Install dependencies for ML and Payment Flask apps:
+```bash
 pip install -r requirements.txt
+```
 
 ### ✅ `requirements.txt` contains:
+```txt
 flask==2.3.3
 flask-cors==4.0.0
 razorpay==1.3.0
@@ -115,19 +135,22 @@ scikit-learn==1.4.1.post1
 xgboost==2.0.3
 catboost==1.2.5
 joblib==1.4.2
+```
 
 ---
 
 ## 🤝 Contributing
 
 Want to help improve FarmConnect?  
-Feel free to fork, open pull requests, or raise issues. For major changes, please start a discussion.
+Feel free to fork, open pull requests, or raise issues.  
+For major changes, please start a discussion.
 
 ---
 
 ## ✨ Author
 
 **Shreyash Chandwadkar**  
-🔗 LinkedIn: https://www.linkedin.com/in/shreyash-chandwadkar  
-🐙 GitHub: https://github.com/shreyash1231  
-📧 Email: chandwadkarshreyash@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/shreyash-chandwadkar)  
+🐙 [GitHub](https://github.com/shreyash1231)  
+📧 chandwadkarshreyash@gmail.com
+
