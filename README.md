@@ -38,14 +38,14 @@
 
 ## 📁 Folder Structure
 
-FarmConnect/
-├── chat_app_mern/             # MERN stack app
-│   ├── backend/               # Node.js + MongoDB server
-│   └── frontend/              # React UI
-├── farmersmarket/             # Spring Boot backend
-├── model.py                   # Flask ML prediction API
-├── payment.py                 # Flask Razorpay integration
-├── requirements.txt           # Python dependencies
+FarmConnect/  
+├── chat_app_mern/             # MERN stack app  
+│   ├── backend/               # Node.js + MongoDB server  
+│   └── frontend/              # React UI  
+├── farmersmarket/             # Spring Boot backend  
+├── model.py                   # Flask ML prediction API  
+├── payment.py                 # Flask Razorpay integration  
+├── requirements.txt           # Python dependencies  
 └── README.md                  # Project documentation
 
 ---
