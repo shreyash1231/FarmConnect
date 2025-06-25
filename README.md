@@ -85,8 +85,20 @@ cd farmersmarket
 
 🔐 **Update MySQL credentials** in `farmersmarket/src/main/resources/application.properties`:
 ```properties
+Email Configuration
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=  {{Email Address From which you are going to send the email to user}}
+spring.mail.password=  {{Email Password to Send the OTP To User}}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+Mysql Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/{{Database Name}}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=root
-spring.datasource.password=Shreyash1@#
+spring.datasource.password={{MySQL Password }}
 ```
 
 ### 4. Start the ML Prediction API
