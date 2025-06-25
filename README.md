@@ -109,7 +109,7 @@ RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
 ```
 
-### For Chat App (`chat_app_mern/backend/.env`)
+### For Chat App (`chat_app_mern/.env`)
 ```env
 PORT=8000
 MONGO_URI=mongodb://localhost:27017/chatapp
